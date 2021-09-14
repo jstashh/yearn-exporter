@@ -51,12 +51,12 @@ def wrap_vault(
         logger.error(error)
         apy = apy_error
     new = False
-    if isinstance(vault, VaultV2):
-        harvests = [harvest for strategy in vault.strategies for harvest in strategy.harvests]
-        if len(harvests) < 4:
-            new = True
-            apy.net_apy = 0.0
-            apy.gross_apr = 0.0
+    # if isinstance(vault, VaultV2):
+    #     harvests = [harvest for strategy in vault.strategies for harvest in strategy.harvests]
+    #     if len(harvests) < 4:
+    #         new = True
+    #         apy.net_apy = 0.0
+    #         apy.gross_apr = 0.0
 
     if isinstance(vault, VaultV1):
         strategies = [
