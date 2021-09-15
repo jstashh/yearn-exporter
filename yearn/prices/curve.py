@@ -130,6 +130,8 @@ class CurveRegistry(metaclass=Singleton):
         if gauges[0] != ZERO_ADDRESS:
             return gauges[0]
 
+        return ZERO_ADDRESS # TODO - find out why some pools don't have gauges
+
     def get_coins(self, pool):
         """
         Get coins of pool.
